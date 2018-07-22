@@ -1,4 +1,4 @@
 # Alfaaz-Website
-Download as ZIP
-Extract
-Run index.html
+# Download as ZIP
+# Extract
+# Run index.html
