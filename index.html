@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link href="img/smalllogo.png" type="image/x-icon" rel="icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <title>ALFAAZ</title>
+    <style>
+            #btn-close-modal {
+                width:100%;
+                text-align: center;
+                cursor:pointer;
+                color:#fff;
+            }
+
+        </style>
+
+  </head>
+  <body>
+
+  <div class = "container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Members">Members</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto my-2 order-0 order-md-1 position-relative">
+            <a class="navbar-brand" href="#">ALFAAZ</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+            <ul class="navbar-nav mr-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Archive">Archive</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  </div>
+
+
+      <div class = "container-fluid con1">
+        <div class = "row">
+          <div class = "col-md-12">
+            <div id="object2">
+              <img class ="img1" src = "img/logo.png">
+            </div>
+            <div id="layer">
+                <div id="msg"></div>
+            </div>
+          </div>
+          <div>
+
+              <!--Call your modal-->
+              <a id="demo01" href="#animatedModal"><img class = "left-main" src = "img/barrelsmall.png"></a>
+
+               <!--DEMO01-->
+               <div id="animatedModal">
+                   <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+                   <div class="close-animatedModal">
+                       <center><p style="color:white">X<p></center>
+                   </div>
+
+                   <div class="modal-content">
+                             <center><p class="madal-text" style = "font-size: 100px; font-family: 'Cookie', cursive; color:white; background-color: transparent; padding-bottom: 20px; margin-bottom: -10px; position:absolute; top:200px;">"Never pick a fight with those who buy ink by the barrel"</p></center>
+                   </div>
+               </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/animatedModal.min.js"></script>
+        <script>
+            $("#demo01").animatedModal({
+              //  modalTarget:'modal-02',
+                animatedIn:'fadeIn',
+                animatedOut:'fadeOutDown',
+                color:'rgba(25, 25, 25, 0.6)',
+                animationDuration: 0.6,
+            });
+        </script>
+
+
+
+  <!--  <script src="js/jquery.min.js"></script>
+    <script src="js/animatedModal.min.js"></script>
+    <script>
+      $("#demo01").animatedModal();
+    </script>-->
+
+    <script>
+    var object2=$('#object2');
+    var layer=$('#layer');
+
+    layer.mousemove(function(e){
+       var valueX=(e.pageX * -1 / 200);
+       var valueY=(e.pageY * -1 / 200);
+
+        object2.css({
+            'transform':'translate3d('+valueX+'px,'+valueY+'px,0)'
+        });
+    });
+
+  </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.navbar', {
+          duration: 2000,
+          delay: 500,
+          origin:'top'
+        });
+       sr.reveal('.left-main', {
+          duration: 2000,
+          delay: 4000,
+          origin:'bottom'
+        });
+      /*  sr.reveal('.img1', {
+          duration: 4000,
+          delay: 0,
+          origin:'bottom'
+        });    */
+    </script>
+  </body>
+</html>
